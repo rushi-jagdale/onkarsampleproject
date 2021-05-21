@@ -1,0 +1,22 @@
+<form method="POST">
+  {% csrf_token %}
+  <div class="container">
+    <h1>update</h1>
+    <p>Please make changes & click update.</p>
+    <hr>
+
+    <label for="name"><b>name</b></label>
+    <input type="text" value="{{data.name}}" name="name" id="name" required>
+
+    <label for="email"><b>name</b></label>
+    <input type="text" value="{{data.email}}" name="email" id="email" required>
+
+    <label for="city"><b>enter city</b></label>
+    <input type="text" value="{{data.city}}" name="city" id="city" required>
+    <hr>
+
+    <button type="submit" class="registerbtn">update/save</button>
+  </div>
+
+
+</form>

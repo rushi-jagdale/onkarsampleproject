@@ -1,0 +1,3 @@
+{% for x in data %}
+<a href="{% url 'singledata' x.name %}">{{x}}</a><button type="submit"><a href="{% url 'updatedata' x.name %}">update</a></button><button type="submit"><a href="{% url 'delete' x.name %}">delete</a></button> <br>
+{% endfor %}

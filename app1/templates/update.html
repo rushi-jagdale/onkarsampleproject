@@ -1,0 +1,22 @@
+<form method="POST" >
+    {% csrf_token %}
+  <div class="container">
+
+
+    <label for="name"><b>name</b></label>
+    <input type="text" value="{{data.name}}" name="name" id="name" required><br>
+
+    <label for="age"><b>age</b></label>
+    <input type="text" value="{{data.age}}" name="age" id="age" required><br>
+
+    <label for="title"><b>title</b></label>
+    <input type="text" value="{{data.title}}" name="title" id="title" required><br>
+
+    <label for="Experience"><b>Experience</b></label>
+    <input type="Experience" value="{{data.Experience}}" name="Experience" id="Experience" required><br>
+
+
+    <button type="submit">update</button>
+
+  </div>
+</form>
