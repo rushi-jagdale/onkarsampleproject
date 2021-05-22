@@ -3,16 +3,15 @@ from django.db import models
 
 # Create your models here.
 class Employee(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     title = models.CharField(max_length=25)
     Experience = models.IntegerField(blank=True, default=0)
-
     def __str__(self):
         return self.name
-
     class Meta:
-        db_table = 'Dept_details'
+        db_table = 'Employee_details'
 
 
 class Department(models.Model):

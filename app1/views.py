@@ -11,14 +11,12 @@ def first1_html(request):
 
 def register(request):
     if request.method == 'POST':
-        print(request.POST)
         name = request.POST['name']
         age = request.POST['age']
         title = request.POST['title']
         Experience = request.POST['Experience']
         data = Employee.objects.create(name=name,age=age,title=title,Experience=Experience)
         Department.objects.create(dept_name=request.POST['dept_name'],salary = request.POST['salary'],employee = data)
-        print(salary)
         return HttpResponse('data saved successfully')
     return render(request,'first_form.html')
 
